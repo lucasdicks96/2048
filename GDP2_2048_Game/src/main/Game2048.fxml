@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Game2048Controller">
+   <center>
+      <GridPane fx:id="gameGrid" gridLinesVisible="true" maxHeight="400.0" maxWidth="400.0" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="label00" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label fx:id="label10" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Label fx:id="label20" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="2" />
+            <Label fx:id="label30" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="3" />
+            <Label fx:id="label01" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="label11" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="label21" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="label31" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="label02" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="label12" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="label22" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="label32" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="label03" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="label13" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="label23" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="label33" alignment="CENTER" contentDisplay="CENTER" maxHeight="100.0" maxWidth="100.0" minHeight="90.0" minWidth="90.0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="161.0" text="2048" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="46.0" prefWidth="816.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="253.0" layoutY="15.0" prefHeight="17.0" prefWidth="46.0" text="Score:" />
+            <Label fx:id="labelScore" layoutX="300.0" layoutY="15.0" prefHeight="17.0" prefWidth="54.0" text="Label" />
+            <Button fx:id="buttonStart" focusTraversable="false" layoutX="551.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleButtonStart" text="Start" />
+            <Button fx:id="buttonBeenden" focusTraversable="false" layoutX="477.0" layoutY="38.0" mnemonicParsing="false" text="Beenden" />
+            <Button fx:id="highscoreButton" focusTraversable="false" layoutX="33.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleHighscoreButton" text="Highscore" />
+            <TextArea fx:id="consoleTextArea" layoutX="128.0" layoutY="37.0" prefHeight="60.0" prefWidth="342.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
